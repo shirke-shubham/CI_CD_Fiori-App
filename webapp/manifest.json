@@ -1,0 +1,115 @@
+{
+  "_version": "1.85.0",
+  "sap.app": {
+    "id": "ctmsproj",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.26.0",
+      "toolsId": "e581834b-5ad5-4946-bc98-b05aee88d27e"
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "com-display": {
+          "semanticObject": "com",
+          "action": "display",
+          "title": "{{com-display.flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "dependencies": {
+      "minUI5Version": "1.149.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ctmsproj.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "transition": "slide",
+        "type": "View",
+        "viewType": "XML",
+        "path": "ctmsproj.view",
+        "async": true,
+        "viewPath": "ctmsproj.view"
+      },
+      "routes": [
+        {
+          "name": "RouteMasterPage",
+          "pattern": ":?query:",
+          "target": [
+            "TargetMasterPage"
+          ]
+        }
+      ],
+      "targets": {
+        "TargetMasterPage": {
+          "id": "MasterPage",
+          "name": "MasterPage"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "ctmsproj.view.App",
+      "type": "XML",
+      "id": "App",
+      "async": true
+    }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "ctmsproj"
+  }
+}

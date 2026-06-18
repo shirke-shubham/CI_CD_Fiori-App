@@ -5,6 +5,7 @@
     <VBox >
     <Text text="Testing this UI5 app for CTMS" />
     <Text text="Testing again this UI5 app for CTMS2" />
+    <Text text="Testing again this UI5 app for CTMS3" /> 
     </VBox>
     </Page>
-</mvc:View>
+</mvc:View> 
